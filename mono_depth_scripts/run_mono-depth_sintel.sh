@@ -36,7 +36,7 @@ evalset=(
   sleeping_2
 )
 
-DATA_DIR=/home/zhengqili/Sintel
+DATA_DIR=/mnt/raid0/Sintel
 
 # Run DepthAnything
 for seq in ${evalset[@]}; do

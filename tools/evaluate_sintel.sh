@@ -14,7 +14,7 @@
 # limitations under the License.
 # ==============================================================================
 
-DATA_PATH=/home/zhengqili/Sintel
+DATA_PATH=/mnt/raid0/Sintel
 CKPT_PATH=checkpoints/megasam_final.pth
 
 evalset=(

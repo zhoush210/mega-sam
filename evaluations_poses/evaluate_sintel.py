@@ -112,7 +112,7 @@ if __name__ == "__main__":
   rte = []
   rre = []
 
-  gt_root_dir = "/home/zhengqili/filestore/droid_slam/data/Sintel"
+  gt_root_dir = "/mnt/raid0/Sintel"
   rootdir = "%s/reconstructions" % os.getcwd()
 
   for scene_name in scene_names:

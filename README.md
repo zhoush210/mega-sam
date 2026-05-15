@@ -38,7 +38,16 @@ Anaconda.
     `conda install xformers-0.0.22.post7-py310_cu11.8.0_pyt2.0.1.tar.bz2`
 
 3.  Compile the extensions for the camera tracking module: \
-    `cd base; python setup.py install`
+```bash
+export CUDA_HOME=/usr/local/cuda-11.7
+export PATH=$CUDA_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+export CC=/usr/bin/gcc-11
+export CXX=/usr/bin/g++-11
+
+cd base
+python setup.py install
+```
 
 ### Downloading pretrained checkpoints
 
@@ -95,11 +104,20 @@ Anaconda.
 
 3.  Running camera tracking (Please modify DATA_PATH in the script. Add
     argument --opt_focal to enable focal length optimization):
-    `./tools/evaluate_demo.sh`
+    `./tools/evaluate_demo.sh `
 
 4.  Running consistent video depth optimization given estimated cameras (Please
     modify datapath in the script):
     `./cvd_opt/cvd_opt_demo.sh`
+
+### npz转换为ply
+```bash
+python tools/visualize_demo_result.py outputs_cvd/swing_sgd_cvd_hr.npz \
+  --frame-stride 2 \
+  --pixel-stride 8 \
+  --save-ply results/swing.ply \
+  --no-window
+```
 
 ### Contact
 

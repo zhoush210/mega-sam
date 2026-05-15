@@ -1,0 +1,13 @@
+Depth-Anything/
+UniDepth/
+cvd_opt/raft-things.pth
+outputs/
+reconstructions/
+cache_flow/mountain_1/
+*.npy
+*.pyc
+*.npz
+*.ply
+outputs_egodex/
+outputs_egoverse/
+outputs_xperience_10m/
